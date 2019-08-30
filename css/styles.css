@@ -1,0 +1,11 @@
+.page-header {
+    background-image: url("../images/header.jpg");
+    background-size: 100%;
+    color: aliceblue;
+    text-align: center;
+    font-weight: bolder; 
+}
+.navbar .navbar-brand img {
+    height: 50px;
+  }
+  
