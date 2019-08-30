@@ -8,4 +8,28 @@
 .navbar .navbar-brand img {
     height: 50px;
   }
-  
+ .slogan {
+     text-align: center;
+     font-size: 30px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+ }
+ .navbar-brand h2 {
+     float: left;
+ }
+ .navbar-brand img {
+     float: left;
+ }
+ #size{
+     width:110px;
+ }
+ .row {
+     justify-content: center;
+ }
+ .img_height {
+     height:360px;
+ }
+ input {
+     text-align: center;
+ }
+
+ 
