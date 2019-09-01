@@ -37,31 +37,35 @@
                 <div class="col-sm-6">
                     <div class="card" style="width: 30rem;">
                         <img src="images/bbq_chicken.jpeg" class="card-img-top img_height" alt="bbq">
-                        <div class="card-body">
+                        <div class="card-body" id="bbq_c-card">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <select name="size" id="size">
+                                    <select name="size" id="bbq_c-size" class="bbq_c">
                                         <option value="large">Large</option>
                                         <option value="medium">Medium</option>
                                         <option value="small">Small</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
-                                    <select name="crust">
+                                    <select name="crust" id="bbq_c-crust" class="bbq_c">
                                         <option value="classic_crust">Classic Crust</option>
                                         <option value="thin_n_crispy">Thin 'N' Crispy</option>
                                         <option value="cheesy_crust">Cheesy Crust</option>
-                                        <option value=gluten_free_base>Gluten Free Base</option>
+                                        <option value="glutten_free_base">Gluten Free Base</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-5">
-                                    <select name="toppings">
-                                        <option value="peperroni">Pepperoni</option>
+                                    <select name="toppings" id="bbq_c-toppings" class="bbq_c">
+                                        <option value="pepperoni">Pepperoni</option>
                                         <option value="mushrooms">Mushrooms</option>
                                         <option value="onions">Onions</option>
                                         <option value="extra_cheese">Extra Cheese</option>
                                     </select>
                                 </div>
+                            </div>
+                            <button type="button" class="btn btn-dark btn-order" id="btn-bbq_c">Order</button>
+                            <div id="bbq_c-price">
+
                             </div>
                         </div>
                     </div>
@@ -69,31 +73,35 @@
                 <div class="col-sm-6">
                     <div class="card" style="width: 30rem;">
                         <img src="images/bbq_steak.jpg" class="card-img-top img_height" alt="bbq">
-                        <div class="card-body">
+                        <div class="card-body" id="bbq_s-card">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <select name="size" id="size">
+                                    <select name="size" id="bbq_s-size" class="bbq_s">
                                         <option value="large">Large</option>
                                         <option value="medium">Medium</option>
                                         <option value="small">Small</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
-                                    <select name="crust">
+                                    <select name="crust" id="bbq_s-crust" class="bbq_s">
                                         <option value="classic_crust">Classic Crust</option>
                                         <option value="thin_n_crispy">Thin 'N' Crispy</option>
                                         <option value="cheesy_crust">Cheesy Crust</option>
-                                        <option value=gluten_free_base>Gluten Free Base</option>
+                                        <option value="glutten_free_base">Gluten Free Base</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-5">
-                                    <select name="toppings">
-                                        <option value="peperroni">Pepperoni</option>
+                                    <select name="toppings" id="bbq_s-toppings" class="bbq_s">
+                                        <option value="pepperoni">Pepperoni</option>
                                         <option value="mushrooms">Mushrooms</option>
                                         <option value="onions">Onions</option>
                                         <option value="extra_cheese">Extra Cheese</option>
                                     </select>
                                 </div>
+                            </div>
+                            <button type="button" class="btn btn-dark btn-order" id="btn-bbq_s">Order</button>
+                            <div id="bbq_s-price">
+
                             </div>
                         </div>
                     </div>
@@ -103,64 +111,72 @@
                 <div class="col-sm-6">
                     <div class="card" style="width: 30rem;">
                         <img src="images/chicken_tikka.png" class="card-img-top img_height" alt="bbq">
-                        <div class="card-body">
+                        <div class="card-body" id="chk_tk-card">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <select name="size" id="size">
+                                    <select name="size" id="chk_tk-size" class="chk-tk">
                                         <option value="large">Large</option>
                                         <option value="medium">Medium</option>
                                         <option value="small">Small</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
-                                    <select name="crust">
+                                    <select name="crust" id="chk_tk-crust" class="chk-tk">
                                         <option value="classic_crust">Classic Crust</option>
                                         <option value="thin_n_crispy">Thin 'N' Crispy</option>
                                         <option value="cheesy_crust">Cheesy Crust</option>
-                                        <option value=gluten_free_base>Gluten Free Base</option>
+                                        <option value="glutten_free_base">Gluten Free Base</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-5">
-                                    <select name="toppings">
-                                        <option value="peperroni">Pepperoni</option>
+                                    <select name="toppings" id="chk_tk-toppings" class="chk-tk">
+                                        <option value="pepperoni">Pepperoni</option>
                                         <option value="mushrooms">Mushrooms</option>
                                         <option value="onions">Onions</option>
                                         <option value="extra_cheese">Extra Cheese</option>
                                     </select>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-dark btn-order" id="btn-chk_tk">Order</button>
+                            <div id="chk_tk-price">
+
+                                </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="card" style="width: 30rem;">
                         <img src="images/hawaiian.jpg" class="card-img-top img_height" alt="bbq">
-                        <div class="card-body">
+                        <div class="card-body" id="haw-card">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <select name="size" id="size">
+                                    <select name="size" id="haw-size" class="haw">
                                         <option value="large">Large</option>
                                         <option value="medium">Medium</option>
                                         <option value="small">Small</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
-                                    <select name="crust">
+                                    <select name="crust" id="haw-crust" class="haw">
                                         <option value="classic_crust">Classic Crust</option>
                                         <option value="thin_n_crispy">Thin 'N' Crispy</option>
                                         <option value="cheesy_crust">Cheesy Crust</option>
-                                        <option value=gluten_free_base>Gluten Free Base</option>
+                                        <option value="glutten_free_base">Gluten Free Base</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-5">
-                                    <select name="toppings">
-                                        <option value="peperroni">Pepperoni</option>
+                                    <select name="toppings" id="haw-toppings" class="haw">
+                                        <option value="pepperoni">Pepperoni</option>
                                         <option value="mushrooms">Mushrooms</option>
                                         <option value="onions">Onions</option>
                                         <option value="extra_cheese">Extra Cheese</option>
                                     </select>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-dark btn-order" id="btn-haw">Order</button>
+                            <div id="haw-price">
+
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -169,64 +185,72 @@
                 <div class="col-sm-6">
                     <div class="card" style="width: 30rem;">
                         <img src="images/margherita.png" class="card-img-top img_height" alt="bbq">
-                        <div class="card-body">
+                        <div class="card-body" id="margh-card">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <select name="size" id="size">
+                                    <select name="size" id="margh-size" class="margh">
                                         <option value="large">Large</option>
                                         <option value="medium">Medium</option>
                                         <option value="small">Small</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
-                                    <select name="crust">
+                                    <select name="crust" id="margh-crust" class="margh">
                                         <option value="classic_crust">Classic Crust</option>
                                         <option value="thin_n_crispy">Thin 'N' Crispy</option>
                                         <option value="cheesy_crust">Cheesy Crust</option>
-                                        <option value=gluten_free_base>Gluten Free Base</option>
+                                        <option value="glutten_free_base">Gluten Free Base</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-5">
-                                    <select name="toppings">
-                                        <option value="peperroni">Pepperoni</option>
+                                    <select name="toppings" id="margh-toppings" class="margh">
+                                        <option value="pepperoni">Pepperoni</option>
                                         <option value="mushrooms">Mushrooms</option>
                                         <option value="onions">Onions</option>
                                         <option value="extra_cheese">Extra Cheese</option>
                                     </select>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-dark btn-order" id="btn-margh">Order</button>
+                            <div id="margh-price">
+
+                                </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="card" style="width: 30rem;">
                         <img src="images/meatzza.png" class="card-img-top img_height" alt="bbq">
-                        <div class="card-body">
+                        <div class="card-body" id="mtz-card">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <select name="size" id="size">
+                                    <select name="size" id="mtz-size" class="mtz">
                                         <option value="large">Large</option>
                                         <option value="medium">Medium</option>
                                         <option value="small">Small</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
-                                    <select name="crust">
+                                    <select name="crust" id="mtz-crust" class="mtz">
                                         <option value="classic_crust">Classic Crust</option>
                                         <option value="thin_n_crispy">Thin 'N' Crispy</option>
                                         <option value="cheesy_crust">Cheesy Crust</option>
-                                        <option value=gluten_free_base>Gluten Free Base</option>
+                                        <option value="glutten_free_base">Gluten Free Base</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-5">
-                                    <select name="toppings">
-                                        <option value="peperroni">Pepperoni</option>
+                                    <select name="toppings" id="mtz-toppings" class="mtz">
+                                        <option value="pepperoni">Pepperoni</option>
                                         <option value="mushrooms">Mushrooms</option>
                                         <option value="onions">Onions</option>
                                         <option value="extra_cheese">Extra Cheese</option>
                                     </select>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-dark btn-order" id="btn-mtz">Order</button>
+                            <div id="mtz-price">
+
+                                </div>
                         </div>
                     </div>
                 </div>
