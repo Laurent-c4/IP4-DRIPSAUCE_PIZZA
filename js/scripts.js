@@ -415,17 +415,71 @@ $(document).ready(function () {
             console.log("Null length of array");
         }
 
+        if (totalPrice!=0) {
         $("#order-checkout").append("<p>Total:" + totalPrice + "</p>")
+        $("#btn-pay").prop( "disabled", false );
+        $("#btn-order_list").prop("disabled", true);
+        $("#btn-clear_order_list").prop("disabled", false);
+
+    }else {
+        alert("Yo have not placed an order yet. Go to menu to place order");
+    }
+
     });
 
     $("#btn-pay").click(function () {
+        $("#btn-order_list").remove();
+        $("#btn-pay").remove();
+        $("#order-checkout").append("<p id='delievery-prompt'>Would you like your order delievered? (Delievery only available within Nairobi at ksh.150)</p>")
+        $("#order-checkout").append("<button type='button' class='btn btn-dark btn-deliever' id='btn-deliever_yes'>Yes</button>")
+        $("#order-checkout").append("<button type='button' class='btn btn-dark btn-deliever' id='btn-deliever_no'>No</button>")
+    });
+
+    $("#btn-clear_order_list").click(function () {
         sessionStorage.clear();
         bbqCPrices = [];
         bbqCPreferences = [];
         bbqSPreferences = [];
         bbqSPrices = [];
         location.href = "../checkout.html";
-        alert("Thanks");
     });
+
+    $("#order-checkout").on('click',"#btn-deliever_yes",function () {
+        $("#btn-deliever_yes").remove();
+        $("#btn-deliever_no").remove();
+        var delieveryPrice=150;
+        totalPrice+=delieveryPrice;
+        $("#delievery-prompt").remove();
+        $("#order-checkout").append("<p><strong>Total Amount Payable: "+totalPrice+"</strong></p>")
+        $("#order-checkout").append("<button type='button' class='btn btn-dark btn-deliever' id='btn-pay1'>Pay</button>")
+        prompt("Enter Your Location (within Nairobi)")
+        alert("Your Order Will Be Delievered Upon Payment")
+        
+    })
+    $("#order-checkout").on('click',"#btn-deliever_no",function () {
+        $("#btn-deliever_yes").remove();
+        $("#btn-deliever_no").remove();
+        $("#delievery-prompt").remove();
+        $("#order-checkout").append("<p><strong>Total Amount Payable: "+totalPrice+"</strong></p>")
+        $("#order-checkout").append("<button type='button' class='btn btn-dark btn-deliever' id='btn-pay2'>Pay</button>")
+    })
+    $("#order-checkout").on('click',"#btn-pay1",function () {
+        sessionStorage.clear();
+        bbqCPrices = [];
+        bbqCPreferences = [];
+        bbqSPreferences = [];
+        bbqSPrices = [];
+        alert("Thank You! Your Order Will Be Delievered To Your Location")
+        location.href = "../index.html";
+    })
+    $("#order-checkout").on('click',"#btn-pay2",function () {
+        sessionStorage.clear();
+        bbqCPrices = [];
+        bbqCPreferences = [];
+        bbqSPreferences = [];
+        bbqSPrices = [];
+        alert("Thank You! Your Order Will Be Available For Pickup in 10 minutes")
+        location.href = "../index.html";
+    })
 
 });
