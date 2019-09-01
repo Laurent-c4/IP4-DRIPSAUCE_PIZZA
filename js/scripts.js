@@ -33,11 +33,11 @@ function bbqChickenPizza(size, crust, topping) {
     this.size = size;
     this.topping = topping;
     this.crust = crust;
-    this.type = "bbq_c";
+    this.type = "BBQ Chicken";
 }
 
 bbqChickenPizza.prototype.description = function () {
-    return this.type + " " + this.size + " " + this.crust + " " + this.topping;
+    return this.type + ", " + this.size + ", " + this.crust + ", " + this.topping;
 }
 
 //BBQ Steak Pizza
@@ -45,11 +45,11 @@ function bbqSteakPizza(size, crust, topping) {
     this.size = size;
     this.topping = topping;
     this.crust = crust;
-    this.type = "bbq_s";
+    this.type = "BBQ Steak";
 }
 
 bbqSteakPizza.prototype.description = function () {
-    return this.type + " " + this.size + " " + this.crust + " " + this.topping;
+    return this.type + ", " + this.size + ", " + this.crust + ", " + this.topping;
 }
 
 //Chicken Tikka Pizza
@@ -57,11 +57,11 @@ function chickenTikkaPizza(size, crust, topping) {
     this.size = size;
     this.topping = topping;
     this.crust = crust;
-    this.type = "chk_tk";
+    this.type = "Chicken Tikka";
 }
 
 chickenTikkaPizza.prototype.description = function () {
-    return this.type + " " + this.size + " " + this.crust + " " + this.topping;
+    return this.type + ", " + this.size + ", " + this.crust + ", " + this.topping;
 }
 
 //Hawaiian Chicken Pizza
@@ -69,11 +69,11 @@ function hawaiianPizza(size, crust, topping) {
     this.size = size;
     this.topping = topping;
     this.crust = crust;
-    this.type = "haw";
+    this.type = "Hawaiian";
 }
 
 hawaiianPizza.prototype.description = function () {
-    return this.type + " " + this.size + " " + this.crust + " " + this.topping;
+    return this.type + ", " + this.size + ", " + this.crust + ", " + this.topping;
 }
 
 //Margherita Pizza
@@ -81,11 +81,11 @@ function margheritaPizza(size, crust, topping) {
     this.size = size;
     this.topping = topping;
     this.crust = crust;
-    this.type = "margh";
+    this.type = "Margherita";
 }
 
 margheritaPizza.prototype.description = function () {
-    return this.type + " " + this.size + " " + this.crust + " " + this.topping;
+    return this.type + ", " + this.size + ", " + this.crust + ", " + this.topping;
 }
 
 //Meatzza Pizza
@@ -93,28 +93,28 @@ function meatzzaPizza(size, crust, topping) {
     this.size = size;
     this.topping = topping;
     this.crust = crust;
-    this.type = "mtz";
+    this.type = "Meatzza";
 }
 
 meatzzaPizza.prototype.description = function () {
-    return this.type + " " + this.size + " " + this.crust + " " + this.topping;
+    return this.type + ", " + this.size + ", " + this.crust + ", " + this.topping;
 }
 
 
 //Default Pizza Price (Small Pizza)
 var pizzaTypePriceF = function () {
     var pizzaTypePrice;
-    if (pizzaType === "bbq_c") {
+    if (pizzaType === "BBQ Chicken") {
         pizzaTypePrice = 500;
-    } else if (pizzaType === "bbq_s") {
+    } else if (pizzaType === "BBQ Steak") {
         pizzaTypePrice = 600;
-    } else if (pizzaType === "chk_tk") {
+    } else if (pizzaType === "Chicken Tikka") {
         pizzaTypePrice = 700;
-    } else if (pizzaType === "haw") {
+    } else if (pizzaType === "Hawaiian") {
         pizzaTypePrice = 800;
-    } else if (pizzaType === "margh") {
+    } else if (pizzaType === "Margherita") {
         pizzaTypePrice = 900;
-    } else if (pizzaType === "mtz") {
+    } else if (pizzaType === "Meatzza") {
         pizzaTypePrice = 1000;
     }
     return pizzaTypePrice;
@@ -123,11 +123,11 @@ var pizzaTypePriceF = function () {
 //Additional Price Based on Size
 var pizzaSizePriceF = function () {
     var pizzaSizePrice;
-    if (inputtedSize === "large") {
+    if (inputtedSize === "Large") {
         pizzaSizePrice = 400;
-    } else if (inputtedSize === "medium") {
+    } else if (inputtedSize === "Medium") {
         pizzaSizePrice = 200;
-    } else if (inputtedSize === "small") {
+    } else if (inputtedSize === "Small") {
         pizzaSizePrice = 0;
     }
     return pizzaSizePrice;
@@ -136,13 +136,13 @@ var pizzaSizePriceF = function () {
 //Additional Price Based on Crust
 var pizzaCrustPriceF = function () {
     var pizzaCrustPrice;
-    if (inputtedCrust == "classic_crust") {
+    if (inputtedCrust == "Classic Crust") {
         pizzaCrustPrice = 5;
-    } else if (inputtedCrust === "thin_n_crispy") {
+    } else if (inputtedCrust === "Thin 'N' Crispy") {
         pizzaCrustPrice = 10;
-    } else if (inputtedCrust === "cheesy_crust") {
+    } else if (inputtedCrust === "Cheesy Crust") {
         pizzaCrustPrice = 15;
-    } else if (inputtedCrust === "glutten_free_base") {
+    } else if (inputtedCrust === "Glutten Free Base") {
         pizzaCrustPrice = 20;
     }
     return pizzaCrustPrice;
@@ -152,29 +152,29 @@ var pizzaCrustPriceF = function () {
 //Additional Price Based on Toppings (Toppings Pricing also relies on Pizza Size)
 var pizzaToppingPriceF = function () {
     var pizzaToppingPrice;
-    if (inputtedSize === "large" && inputtedTopping === "pepperoni") {
+    if (inputtedSize === "Large" && inputtedTopping === "Pepperoni") {
         pizzaToppingPrice = 40;
-    } else if (inputtedSize === "large" && inputtedTopping === "mushrooms") {
+    } else if (inputtedSize === "Large" && inputtedTopping === "Mushrooms") {
         pizzaToppingPrice = 50;
-    } else if (inputtedSize === "large" && inputtedTopping === "onions") {
+    } else if (inputtedSize === "Large" && inputtedTopping === "Onions") {
         pizzaToppingPrice = 60;
-    } else if (inputtedSize === "large" && inputtedTopping === "extra_cheese") {
+    } else if (inputtedSize === "Large" && inputtedTopping === "Extra Cheese") {
         pizzaToppingPrice = 70;
-    } else if (inputtedSize === "medium" && inputtedTopping === "pepperoni") {
+    } else if (inputtedSize === "Medium" && inputtedTopping === "Pepperoni") {
         pizzaToppingPrice = 30;
-    } else if (inputtedSize === "medium" && inputtedTopping === "mushrooms") {
+    } else if (inputtedSize === "Medium" && inputtedTopping === "Mushrooms") {
         pizzaToppingPrice = 40;
-    } else if (inputtedSize === "medium" && inputtedTopping === "onions") {
+    } else if (inputtedSize === "Medium" && inputtedTopping === "Onions") {
         pizzaToppingPrice = 50;
-    } else if (inputtedSize === "medium" && inputtedTopping === "extra_cheese") {
+    } else if (inputtedSize === "Medium" && inputtedTopping === "Extra Cheese") {
         pizzaToppingPrice = 60;
-    } else if (inputtedSize === "small" && inputtedTopping === "pepperoni") {
+    } else if (inputtedSize === "Small" && inputtedTopping === "Pepperoni") {
         pizzaToppingPrice = 20;
-    } else if (inputtedSize === "small" && inputtedTopping === "mushrooms") {
+    } else if (inputtedSize === "Small" && inputtedTopping === "Mushrooms") {
         pizzaToppingPrice = 30;
-    } else if (inputtedSize === "small" && inputtedTopping === "onions") {
+    } else if (inputtedSize === "Small" && inputtedTopping === "Onions") {
         pizzaToppingPrice = 40;
-    } else if (inputtedSize === "small" && inputtedTopping === "extra_cheese") {
+    } else if (inputtedSize === "Small" && inputtedTopping === "Extra Cheese") {
         pizzaToppingPrice = 50;
     }
     return pizzaToppingPrice;
