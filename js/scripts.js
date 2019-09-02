@@ -339,7 +339,7 @@ $(document).ready(function () {
 
     $("form").submit(function () {
         event.preventDefault();
-        location.href = "../checkout.html";
+        location.href = "/checkout.html";
     });
 
     $("#btn-order_list").click(function () {
@@ -441,7 +441,7 @@ $(document).ready(function () {
         bbqCPreferences = [];
         bbqSPreferences = [];
         bbqSPrices = [];
-        location.href = "../menu.html";
+        location.href = "menu.html";
     });
 
     $("#order-checkout").on('click',"#btn-deliever_yes",function () {
@@ -470,7 +470,7 @@ $(document).ready(function () {
         bbqSPreferences = [];
         bbqSPrices = [];
         alert("Thank You! Your Order Will Be Delievered To Your Location")
-        location.href = "../index.html";
+        location.href = "index.html";
     })
     $("#order-checkout").on('click',"#btn-pay2",function () {
         sessionStorage.clear();
@@ -479,7 +479,7 @@ $(document).ready(function () {
         bbqSPreferences = [];
         bbqSPrices = [];
         alert("Thank You! Your Order Will Be Available For Pickup in 10 minutes")
-        location.href = "../index.html";
+        location.href = "index.html";
     })
 
 });
