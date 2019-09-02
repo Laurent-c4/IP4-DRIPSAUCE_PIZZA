@@ -441,7 +441,6 @@ $(document).ready(function () {
         bbqCPreferences = [];
         bbqSPreferences = [];
         bbqSPrices = [];
-        location.href = "menu.html";
     });
 
     $("#order-checkout").on('click',"#btn-deliever_yes",function () {
