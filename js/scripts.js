@@ -339,7 +339,7 @@ $(document).ready(function () {
 
     $("form").submit(function () {
         event.preventDefault();
-        location.href = "/checkout.html";
+        location.href = "checkout.html";
     });
 
     $("#btn-order_list").click(function () {
