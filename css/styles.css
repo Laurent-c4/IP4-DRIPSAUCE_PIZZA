@@ -20,7 +20,8 @@
 .slogan {
     text-align: center;
     font-size: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 .navbar-brand h2 {
@@ -51,4 +52,18 @@ input {
 }
 form {
     text-align: center;
+}
+
+#love-pizza {
+    background-image: url("../images/love.jpg");
+    background-size: 100%;
+}
+#about-us {
+    background-image: url("../images/best.jpg");
+    background-size: 100%;
+    text-align: center;
+}
+body {
+    background-image: url("../images/back.jpeg");
+    background-size: 100%;
 }
